@@ -11,11 +11,13 @@ class Game:
         self.clock = pygame.time.Clock()
         
         self.img = pygame.image.load('data/images/clouds/cloud_1.png')
+        self.img_pos = [160,260]
+        self.movement = [False, False]
 
     def run(self):
 
         while True:
-            self.screen.blit(self.img, (100, 200))
+            self.screen.blit(self.img, self.img_pos)
             
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
