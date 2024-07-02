@@ -28,6 +28,11 @@ class Game:
                         self.movement[0] = True
                     if event.key == pygame.KEYDOWN:
                         self.movement[1] = True
+                if event.type == pygame.KEYUP:
+                    if event.key == pygame.K_UP:
+                        self.movement[0] = True
+                    if event.key == pygame.KEYDOWN:
+                        self.movement[1] = True
                     
         
             pygame.display.update()
